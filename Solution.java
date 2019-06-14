@@ -1,3 +1,7 @@
+
+
+import java.util.Arrays;
+
 public class Solution {
     public static void main(String[] args) {
         int[] data = new int[]{1, 2, 3, 5, -2, -8, 0, 77, 5, 5};
@@ -14,8 +18,12 @@ public class Solution {
         }
 
         // напишите тут ваш код
+       int[] ClonedArray = inputArray.clone();
+        Arrays.sort(ClonedArray);
+        return new Pair<Integer, Integer>(ClonedArray[0], ClonedArray[ClonedArray.length - 1]);
 
-        return new Pair<Integer, Integer>(0, 0);
+        
+       
     }
 
     public static class Pair<X, Y> {
